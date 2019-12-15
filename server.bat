@@ -1,0 +1,1 @@
+http-server -p 11000 --cors -c 0.5 --log-ip

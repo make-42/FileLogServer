@@ -1,0 +1,56 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+console.log(axios);
+var url = "127.0.0.1:11000"
+var mainLoopId = setInterval(function(){
+if (document.getElementById('file').value == ""){}
+else{
+responseax = axios.get("http://".concat(url,"/").concat(document.getElementById('file').value)).then((response) => {
+console.log(response.data);
+document.getElementById("log").innerHTML = "<div class=\"paddinglog\" id=\"paddinglog\">".concat(response.data.replace(/\n/g,"<br>").concat("</div>"));
+log = document.getElementById('log')
+log.scrollTo(0,log.scrollHeight);
+window.scrollTo(0,0);
+console.log(document.getElementById('log'));
+});
+}
+},1000);
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+.main {
+background-color: #333;
+width: 100%;
+height: 100%;
+position : absolute;
+z-index  : 1;
+top : 0;
+left : 0;
+font-family: 'Fira Code', monospace;
+}
+.paddinglog {
+padding-bottom:2%;
+}
+.file{
+width:inherit;
+font-size: 200%;
+height:5%
+}
+.log{
+height:inherit;
+overflow:scroll;
+color:#fff;
+font-size: 200%;
+scroll-behavior: smooth;
+}
+
+</style>
+
+<div id="main" class="main">
+<input type="text" id="file" class="file"><br>
+<div class="log" id="log">
+<label id="logtext" class="logtext"></label>
+</div>
+</div>
+
