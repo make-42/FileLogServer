@@ -1,8 +1,8 @@
 # FileLogServer
 A simple log server.
 
-#Install
+## Install
 run ```npm install http-server /g```
 
-#Running
+## Running
 Execute ```server.bat```.
