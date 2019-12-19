@@ -2,7 +2,7 @@
 A simple log server.
 
 ## Install
-Run ```npm install http-server /g```.
+Run ```npm install -g http-server```.
 
 ## Running
 Execute ```server.bat```.
